@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
+        // fire the fish!
         if (Input.GetKeyDown(KeyCode.Space))
         {
 

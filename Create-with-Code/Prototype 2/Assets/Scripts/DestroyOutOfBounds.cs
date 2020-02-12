@@ -18,9 +18,16 @@ public class DestroyOutOfBounds : MonoBehaviour
     void Update()
     {
         
-        if (transform.position.z > topBound || transform.position.z < lowerBound)
+        if(transform.position.z < lowerBound) //if you let an animal slip past the player...
         {
-            Destroy(gameObject);
+
+            Debug.Log("NOTICE - Whoops! You let one slip. You can try again!");
+
+        }
+
+        if (transform.position.z > topBound || transform.position.z < lowerBound) //if an object's out of the player view...
+        {
+            Destroy(gameObject); //destroy it
         }
 
     }
